@@ -1,0 +1,170 @@
+<html>
+<head>
+<title>Registration</title>
+    <style>
+        button{
+            margin-left: 10px;
+            margin-top: 10px
+        }
+    </style>
+</head>
+<body style="background-color:#E64836">
+   <div style="background-color:#E64836; height:150px;top:0px;left:0px;">
+ <img src="logo.png" alt="logo" style="position:absolute; width:100px; height:88px;top:0px;left:0px;">
+        <h1 style="margin-left: 100px;"><p><span style="color: darkgrey">M</span>ix</p></h1>
+       <table style="background-color:darkgray;width: 50%;margin-left: 300px;margin-top: 80px;border-collapse: collapse" border="1">
+       <tr>           <th><a href="about.html" target="_blank" onmouseover="overlink(this)" onmouseout="outoflink(this)">About us</a></th>
+       
+           <th><a href="login.html" target="_blank" onmouseover="overlink(this)" onmouseout="outoflink(this)">Login</a></th>
+           <th><a href="register.html" target="_blank" onmouseover="overlink(this)" onmouseout="outoflink(this)">Signup</a></th>
+           </tr></table>
+    </div>
+<h1>SignUp</h1><br>
+<form id="myform" method="get" action="register" onsubmit="onsub()">
+<fieldset>
+<legend>Signup with your details</legend>
+<label for="firstname">Firstname:</label>
+<input type="text" name="firstname" placeholder="enter ur firstname" maxlength="10"style="margin-top: 5px" onblur="fname(this)"><br><br>
+<label for="lastname">Lastname:</label>
+<input type="text" name="lastname" placeholder="enter ur lastname" maxlength="10" style="margin-top: 5px" onblur="lname(this)"><br><br>
+<label for="dob" >DOB:</label>
+<input type="date" name="dob"><br><br>
+<label for="gender">Gender:</label>
+<input type="radio" name="gender" value="male">Male
+<input type="radio" name="gender" value="female">Female<br><br>
+<label for="country" >Country:</label>
+<select id="selectedcountry" name="country" onchange="conslist()">
+<option value="">select country</option>    
+<option value="India">India</option>
+<option value="America">America</option>
+<option value="Sri lanka">Sri lanka</option>
+<option value="Pakistan">Pakistan</option>
+</select><br><br>
+<label for="Region" >Select Region:</label>    
+<select id="Region" name="Region">
+</select><br><br>
+<label for="Preferred language" >Preferred language:</label>    
+<input type="checkbox" style="margin-top: 10px">English<br>    
+<input type="checkbox"  style="margin-top: 10px">Hindi    
+<input type="checkbox" style="margin-top: 10px">Telugu    
+<input type="checkbox"  style="margin-top: 10px">Tamil<br><br>    
+<label for="emaiid" placeholder="enter ur mailid">EmailId:</label>
+<input type="email" name="emailid" style="margin-top: 5px" placeholder="enter emailId" onblur="emailvalidation(this)"><br><br>
+<label for="mobile no" placeholder="enter ur mobile number">Mobile no:</label>
+<input type="tel" name="mobileno" placeholder="enter mobile number" style="margin-top: 5px" onblur="phvalidation(this)"><br><br>
+<label for="password" >SetPassword:</label>
+<input id="setpass" type="password" name="setpassword" placeholder="set password"><br><br>
+<label for="password">ReenterPassword:</label>
+<input type="password" name="reenterpassword" placeholder="reenter password" onblur="passwordconfirmation(this)"><br> 
+<input type="checkbox" id="valid" name="valid-details" onclick="validation()"style="margin-top: 10px">The above details provided are valid<br>    
+<input type="submit" id="submitbutton" style="margin-left: 2px" value="submit">
+</fieldset>
+</form>
+<script>
+    document.getElementById("submitbutton").disabled=true;
+    var flag=0;
+    function conslist(){
+        var k=document.getElementById("selectedcountry");
+        
+        if(k.options[k.selectedIndex].value=="India"){
+            document.getElementById("Region").options.add(new Option("",""));
+            document.getElementById("Region").options.add(new Option("Maharastra","Maharastra"));
+            document.getElementById("Region").options.add(new Option("Andhra Pradesh","Andhra Pradesh"));
+            document.getElementById("Region").options.add(new Option("Karnataka","Karnataka"));
+            document.getElementById("Region").options.add(new Option("Delhi","Delhi"));
+}
+        if(k.options[k.selectedIndex].value=="America"){
+            document.getElementById("Region").options.add(new Option("",""));
+            document.getElementById("Region").options.add(new Option("California","California"));
+            document.getElementById("Region").options.add(new Option("Texas","Texas"));
+            document.getElementById("Region").options.add(new Option("New York","New York"));
+            document.getElementById("Region").options.add(new Option("Washington","Washington"));
+
+        }
+        if(k.options[k.selectedIndex].value=="Sri lanka"){
+            document.getElementById("Region").options.add(new Option("",""));
+            document.getElementById("Region").options.add(new Option("Western Province","Western Province"));
+            document.getElementById("Region").options.add(new Option("Southern Province","Southern Province"));
+            document.getElementById("Region").options.add(new Option("Uva Province","Uva Province"));
+            document.getElementById("Region").options.add(new Option("Sabaragamuwa Province","Sabaragamuwa Province"));
+            
+        }
+        if(k.options[k.selectedIndex].value=="Pakistan"){
+           document.getElementById("Region").options.add(new Option("",""));
+            document.getElementById("Region").options.add(new Option("Gilgit-Baltistan","Gilgit-Baltistan"));
+            document.getElementById("Region").options.add(new Option("Kashmir","Kashmir"));
+            document.getElementById("Region").options.add(new Option("Islamabad","Islamabad"));
+            document.getElementById("Region").options.add(new Option("Punjab","Punjab"));
+            
+        }
+    }
+    function fname(obj){
+        if(obj.value.length<=4 || !/^[a-zA-Z]+$/.test(obj.value))
+{
+alert("Invalid firstName.It should be atleast 4 characters");
+}
+}
+     function lname(obj){
+        if(obj.value.length<=4 || !/^[a-zA-Z]+$/.test(obj.value))
+{
+alert("Invalid lastName.It should be atleast 4 characters");
+}
+}
+    function emailvalidation(obj){
+        var em=obj.value;
+        if(/^[a-zA-Z0-9\._-]+@[a-zA-Z]+\.(com|edu|net)$/.test(em)==false){
+            alert("inavlid email")
+            obj.value="";
+        }}
+    function phvalidation(obj){
+        var ph=obj.value;
+    if(ph.length<10 || !/^\d{10}$/.test(ph))
+{
+window.alert(" invalid Phone number");
+    obj.value="";
+}}
+
+    function passwordcheck(obj){
+        var pwd=obj.value;
+        if(pwd.length<7){
+            alert("password should be atleast 7 characters");
+            obj.value="";
+        }
+    }
+    
+        function passwordconfirmation(obj){
+            if(obj.value!==document.getElementById("setpass").value){
+                alert("passwords donot match");
+                obj.value="";
+                document.getElementById("setpass").value="";
+            }
+        }
+    function validation(){
+        var ele=document.getElementById("myform").elements;
+        for(i=1;i<ele.length-1;i++){
+            if(ele[i].value==""){
+                alert("please enter"+" "+ele[i].name);
+                document.getElementById("valid").checked=false;
+            
+                }
+        if(ele[i].value!==""){
+            flag=flag+1;
+        }}
+    if(flag==13){
+            document.getElementById("submitbutton").disabled=false;
+    }
+        flag=0;
+        if(document.getElementById("valid").checked==true){
+            document.getElementById("submitbutton").disabled=false;
+        }
+    }
+    
+    function overlink(obj){
+            obj.style.color= "green";
+        };
+    function outoflink(obj){
+        obj.style.color= "blue";
+    }
+    </script>    
+</body>
+</html>
