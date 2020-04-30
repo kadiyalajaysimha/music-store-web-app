@@ -1,0 +1,56 @@
+<html>
+<head><title>login</title>
+    <style>
+    fieldset{
+        margin-top: 70px;
+        width: 350px;
+        }
+    </style></head>
+<body style="background-color:#E64836">
+     <div style="background-color:#E64836; height:150px;top:0px;left:0px">
+ <img src="logo.png" alt="logo" style="position:absolute; width:100px; height:88px;left:0px;top:0px">
+        <h1 style="margin-left: 100px;"><p><span style="color: darkgrey">M</span>ix</p></h1>
+       <table style="background-color:darkgray;width: 50%;margin-left: 300px;margin-top: 80px;border-collapse: collapse" border="1">
+       <tr>
+           <th><a href="login.html" target="_blank" onmouseover="overlink(this)" onmouseout="outoflink(this)">Login</a></th>
+           <th><a href="register.html" target="_blank" onmouseover="overlink(this)" onmouseout="outoflink(this)">Signup</a></th>
+                      <th><a href="about.html" target="_blank" onmouseover="overlink(this)" onmouseout="outoflink(this)">About us</a></th>
+           
+           </tr></table>
+    </div>                     
+    <h1 style="text-align: center;margin-top: 180px">Login and explore the music world</h1>
+	<form action="login" method="post"><center>
+        <fieldset style="">
+            <legend>LOGIN</legend><br>
+		<label for="userid" >UserId:</label>
+		<input type="text"  class="lstyle" name="userId" placeholder="Enter userId(or)mailid"><br><br>
+		<label for="password" >Password:</label>
+		<input type="password" name="password" placeholder="Enter password"><br>
+            <input id="submitbutton" type="submit" style="margin-top: 5px" value="login"><br>
+            <div>
+                <p><span style="font-weight: bold">Note:</span>If you are a new user please<a id="registrationlink" href="register.html" target="_blank">Register here</a></p></div>
+            </fieldset>
+        </center>
+	</form>
+    <script>
+        document.getElementById("submitbutton").addEventListener('click',function onsubmitbuttonclick(){
+            /*styling*/
+        });
+        document.getElementById("forgotpasswordbutton").addEventListener('click',function onforgotpasswordbuttonclick(){
+            /* styling*/
+        });
+         document.getElementById("registrationlink").addEventListener('mouseover',function onregistrationlinkclick(){
+            this.style.color= "green";
+        });
+         document.getElementById("registrationlink").addEventListener('mouseout',function onregistrationlinkclick(){
+            this.style.color = "blue";
+        });
+         function overlink(obj){
+            obj.style.color= "green";
+        };
+    function outoflink(obj){
+        obj.style.color= "blue";
+    }
+        
+    </script>
+</body>
