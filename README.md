@@ -6,7 +6,7 @@ The index.html that you see here is just a preview of how the login page looks l
 hosted using github pages at https://kadiyalajaysimha.github.io/crispy-spoon/ .It is static page
 and is meant only to give a view of the login page.
 
-Other Main files and code are in the myproject/src and myproject/WebContent.
+Actual Main files and code are in the myproject/src and myproject/WebContent.
 
 Description:
 
