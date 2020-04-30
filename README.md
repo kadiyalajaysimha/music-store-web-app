@@ -3,7 +3,7 @@
 This project is done with jsps,servlets, JavaScript,html,Mysql(database),CSS.
 
 The index.html that you see here is just a preview of how the login page looks like and is 
-hosted using github pages at https://kadiyalajaysimha.github.io/crispy-spoon/.It is static page
+hosted using github pages at https://kadiyalajaysimha.github.io/crispy-spoon/ .It is static page
 and is meant only to give a view of the login page.
 
 Other Main files and code are in the myproject/src and myproject/WebContent.
