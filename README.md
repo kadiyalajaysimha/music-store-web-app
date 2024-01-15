@@ -1,26 +1,25 @@
-# crispy-spoon
+# Music Store Web App
 
-This project is done with jsps,servlets, JavaScript,html,Mysql(database),CSS.
+Welcome to the Music Store Web App, a platform designed for music enthusiasts who want to listen to song previews and download them to their local machines. This project utilizes JSP, Servlets, Oracle SQL(database), JavaScript, HTML, and CSS to create a seamless music browsing and downloading experience.
 
-The index.html that you see here is just a preview of how the login page looks like and is 
-hosted using github pages at https://kadiyalajaysimha.github.io/crispy-spoon/ .It is static page
-and is meant only to give a view of the login page.
+## Preview ##
 
-Actual Main files and code are in the myproject/src and myproject/WebContent.
+The index.html file provides a preview of the login page. This static page is hosted using GitHub Pages, offering a glimpse of the user interface. However, the actual main files and code are located in **myproject/src** and **myproject/WebContent**.
 
-Description:
+## Features ##
 
-The main goal of this project is to provide a platform for all music lovers who wants to listen to a preview
-of the song and download them onto their local machine.
+### User Authentication
 
-In order to download any song
+1. **Login**: Users need to log in to access the full functionality of the app. The login page's appearance is showcased in the index.html preview.
+2. **Registration**: New users should register before logging in. This ensures a personalized experience and access to the music store.
 
-1.The user should first login and can then play and download all the songs which are available in the store.
+### Music Store
 
-2.If the user is new he should first register before logging in.
+1. **Song Preview**: Once logged in, users can play and preview songs available in the store.
+2. **Song Download**: Users have the option to download their favorite songs to their local machines.
+3. **Multilingual Store**: The store encompasses a diverse range of songs from different languages, catering to a global audience.
 
-3.If user trys to login without registering then he will stay on same login page.
+## Project Structure
 
-4.After successfully registering and logging in he can then download all the songs that are available in the store.
-
-5.The store contains different songs from different languages.
+* **myproject/src**: Contains the main Java source files, including JSP and Servlets, responsible for the project's logic.
+* **myproject/WebContent**: Includes HTML, JavaScript, CSS, and other web-related resources essential for the user interface and front-end functionality.
