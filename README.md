@@ -1,6 +1,6 @@
-# Music Store Web App
+# Online Music Store Web App
 
-Welcome to the Music Store Web App, a platform designed for music enthusiasts who want to listen to song previews and download them to their local machines. This project utilizes JSP, Servlets, Oracle SQL(database), JavaScript, HTML, and CSS to create a seamless music browsing and downloading experience.
+Welcome to the Online Music Store Web App, a platform designed for music enthusiasts who want to listen to song previews and download them to their local machines. This project utilizes JSP, Servlets, Oracle SQL(database), JavaScript, HTML, and CSS to create a seamless music browsing and downloading experience.
 
 ## Preview ##
 
