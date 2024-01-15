@@ -4,7 +4,7 @@ Welcome to the Online Music Store Web App, a platform designed for music enthusi
 
 ## Preview ##
 
-The index.html file provides a preview of the login page. This static page is hosted using GitHub Pages, offering a glimpse of the user interface. However, the actual main files and code are located in **myproject/src** and **myproject/WebContent**.
+The index.html file provides a preview of the login page. This static page is hosted using GitHub Pages at https://kadiyalajaysimha.github.io/online-music-store-web-app/, offering a glimpse of the user interface. However, the actual main files and code are located in **myproject/src** and **myproject/WebContent**.
 
 ## Features ##
 
