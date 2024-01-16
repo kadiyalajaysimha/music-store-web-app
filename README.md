@@ -2,10 +2,6 @@
 
 Welcome to the Online Music Store Web App, a platform designed for music enthusiasts who want to listen to song previews and download them to their local machines. This project utilizes JSP, Servlets, Oracle SQL(database), JavaScript, HTML, and CSS to create a seamless music browsing and downloading experience.
 
-## Preview ##
-
-The index.html file provides a preview of the login page. This static page is hosted using GitHub Pages at https://kadiyalajaysimha.github.io/online-music-store-web-app/, offering a glimpse of the user interface. However, the actual main files and code are located in **myproject/src** and **myproject/WebContent**.
-
 ## Features ##
 
 ### User Authentication
